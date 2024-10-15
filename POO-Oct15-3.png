@@ -1,0 +1,23 @@
+PImage imagen; 
+int v = 10;
+void setup(){
+  size(450,450);
+  imagen = loadImage("gatocubrebocas.png");
+  
+}
+
+void draw(){
+  background(255);
+  for(int i = 0; i<imagen.width; i+= v){
+    for(int j = 0; j<imagen.height; j+=v){
+      color c = imagen.get(i,j);
+      stroke(c);
+      strokeWeight(random(1,20));
+      line(i,j,i+random(-v*5,v*5),j+random(-v*5,v*5));
+    }
+  }
+}
+
+void keyPressed(){
+  saveFrame("gato.png");
+}
