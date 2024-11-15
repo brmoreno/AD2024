@@ -8,11 +8,11 @@ class Nodo{
     pos = new PVector(random(1),random(1));
     r = random(0.1,0.3);
     f = random(-0.1,0.3);
-    v = PVector.random2D().mult(0.0001);
+    v = PVector.random2D().mult(0.001);
   }
   
   void mover(){
-    //pos.add(v);
+    pos.add(v);
   }
 }
 
